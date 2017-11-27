@@ -3,7 +3,7 @@ Wireless Arduino Nano / NRF24l01 Buzzer system with Game-Master to reset the buz
 
 [![Demonstration Video](http://img.youtube.com/vi/lsZmaIB801M/0.jpg)](http://www.youtube.com/watch?v=lsZmaIB801M "Game Show Buzzer System")
 
-*play the demo video of the buzzer system*
+*click the image to play the demo video of the buzzer system*
 
 ### Master / Wav-Player
 The game master controls the buzzers. It receives signal from the pressed buzzers and determines, who wins the race. The winner receives the "light on" signal. Optional you can add a Wav-Player, to support a buzzer sound on success.
