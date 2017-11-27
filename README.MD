@@ -2,7 +2,8 @@
 Wireless Arduino Nano / NRF24l01 Buzzer system with Game-Master to reset the buzzer states. Only one Buzzer can "win". Each Buzzer trigger can have it's own audio playback.
 
 [![Demonstration Video](http://img.youtube.com/vi/lsZmaIB801M/0.jpg)](http://www.youtube.com/watch?v=lsZmaIB801M "Game Show Buzzer System")
-*watch the demonstration video*
+
+*play the demo video of the buzzer system*
 
 ### Master / Wav-Player
 The game master controls the buzzers. It receives signal from the pressed buzzers and determines, who wins the race. The winner receives the "light on" signal. Optional you can add a Wav-Player, to support a buzzer sound on success.
@@ -14,10 +15,11 @@ The game master controls the buzzers. It receives signal from the pressed buzzer
 #### Circuit Layout
 
 ![Buzzer and master circuit](buzzer-circuit-layout.jpg)
+
 *note: the wave-player circuit layout is not included*
 
-**Install**
-- Copy NF24* to your your Arduino folder
+**Arduino Setup**
+- Copy NF24* folders to your your Arduino folder
 - Install library [RF24 by TMRh20](http://tmrh20.github.io/RF24/)
 - (optional) Install Library [TMRpcm for wav-player](https://github.com/TMRh20/TMRpcm)
 
