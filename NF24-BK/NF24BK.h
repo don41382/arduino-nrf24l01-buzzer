@@ -2,10 +2,6 @@ const uint64_t pipes[2] = { 0xABCDABCD71LL, 0x544d52687CLL };
 
 #include "RF24.h"
 
-#define BK_SW1 1
-#define BK_SW2 2
-#define BK_MASTER 3
-
 #define BK_BTN_PRESSED 1
 #define BK_LIGHT_ON 2
 #define BK_LIGHT_OFF 3

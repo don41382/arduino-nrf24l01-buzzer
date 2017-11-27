@@ -9,6 +9,7 @@ RF24 radio(9, 10);
 
 #define CLEAR_BTN_PIN 5
 
+byte buzzerIds[] = {1,2}; // list all your existing buzzers client ids (see buzzerId in NF24-BK-BUZZER.ino)
 
 void setup() {
   Serial.begin(57600);
@@ -36,13 +37,12 @@ void loop(void) {
     currentBuzzer = 0;
 
     radio.stopListening();
-    bk_msg.device = BK_SW1;
-    bk_msg.cmd = BK_LIGHT_OFF;
-    radio.write(&bk_msg, sizeof(bk_msg));
-
-    bk_msg.device = BK_SW2;
-    bk_msg.cmd = BK_LIGHT_OFF;
-    radio.write(&bk_msg, sizeof(bk_msg));
+    int i;
+    for (i = 0; i < sizeof(buzzerIds); i++) {
+      bk_msg.device = buzzerIds[i];
+      bk_msg.cmd = BK_LIGHT_OFF;
+      radio.write(&bk_msg, sizeof(bk_msg));
+    }
     radio.startListening();
 
     lastPress = millis();
@@ -101,3 +101,4 @@ void sendSound(int team) {
   Wire.endTransmission();
   Serial.println("Send Sound CMD");
 }
+
